@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Logo from '../../../public/assets/images/Logo.png'
+import Logo from '../../../public/assets/icon/icon-group.svg'
 
 const AuthLayout = () => {
   return (

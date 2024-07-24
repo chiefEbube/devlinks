@@ -1,6 +1,6 @@
 import Image from "next/image"
-import emailIcon from "../../../public/assets/icon/email.png"
-import passwordIcon from "../../../public/assets/icon/password.png"
+import emailIcon from "../../../public/assets/icon/icon-email.svg"
+import passwordIcon from "../../../public/assets/icon/icon-password.svg"
 
 const LoginForm = () => {
     return (
