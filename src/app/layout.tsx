@@ -15,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#fbfafb]">
-        <NavBar/>
+        {
+          <NavBar/>}
         {children}
         </body>
     </html>
