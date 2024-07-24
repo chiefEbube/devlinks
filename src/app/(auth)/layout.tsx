@@ -10,7 +10,7 @@ export default function LoginLayout({
     return (
         <html lang="en">
             <body className="sm:grid place-items-center bg-[#fbfafb]">
-                <div className="bg-white sm:bg-[#fbfafb] px-4 sm:px-8 py-8">
+                <div className="bg-white sm:bg-[#fbfafb] px-8 py-8">
                     <AuthLayout />
                     {children}
                 </div>
