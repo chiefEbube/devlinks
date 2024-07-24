@@ -1,5 +1,7 @@
 import AuthLayout from "../components/AuthLayout";
 import "@/styles/globals.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function LoginLayout({
@@ -14,6 +16,7 @@ export default function LoginLayout({
                     <AuthLayout />
                     {children}
                 </div>
+                <ToastContainer position="top-right" />
             </body>
         </html>
     );
