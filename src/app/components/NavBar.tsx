@@ -10,8 +10,13 @@ import { usePathname } from "next/navigation";
 import Logo from '../../../public/assets/icon/icon.png';
 
 const NavBar = () => {
-    const pathname = usePathname();
-    const shouldRenderNavBar = pathname === '/' || pathname === '/profile';
+    const isNavBarPath = (path: string): path is '/' | '/profile' => {
+        return path === '/' || path === '/profile';
+    };
+
+    const pathname = usePathname() as string;
+
+    const shouldRenderNavBar = isNavBarPath(pathname);
 
     return (
         <>
