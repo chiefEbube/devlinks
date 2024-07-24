@@ -17,3 +17,7 @@ img {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.input-cursor-color {
+  caret-color: #633CFF;
+}
