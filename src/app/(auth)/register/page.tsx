@@ -1,7 +1,9 @@
+'use client'
+
 import RegisterForm from "@/app/components/RegisterForm"
 import Link from "next/link"
 
-const page = () => {
+const RegisterPage = () => {
   return (
     <div className="pt-16 bg-white sm:w-[476px] mx-auto sm:p-10 sm:mt-14 rounded">
       <div>
@@ -19,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default RegisterPage
