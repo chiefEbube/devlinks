@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
 
-import heroImage from '../../public/assets/icon/mobile-img.png'
+import heroImage from '../../../public/assets/icon/mobile-img.png'
 import { useState } from "react";
-import LinkCard from "./components/LinkCard";
+import LinkCard from "../components/LinkCard";
 
 export default function Home() {
   const [isLinkAdded, setIsLinkAdded] = useState(false)

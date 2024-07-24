@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const page = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-16 bg-white min-w-[375px] sm:w-[476px] h-screen sm:max-h-[482px] mx-auto sm:p-10 sm:mt-14 rounded">
       <div>
         <h1 className="font-semibold text-2xl text-gray leading-9">Login</h1>
         <p className="text-gray-100 font-normal text-base">Add your details below to get back into the app</p>
