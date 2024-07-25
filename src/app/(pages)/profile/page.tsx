@@ -14,9 +14,24 @@ export default function Home() {
           <p className="text-gray-100 font-normal text-base">Add your details to create a personal touch to your profile.</p>
         </div>
 
-        <button className="w-full border border-primary rounded py-[11px] font-semibold text-primary mt-10 hover:bg-primary-200 hover:border-primary-200 duration-200">+ Add new link</button>
+        <div className="bg-gray-300 mt-6 rounded py-[46px] px-5 text-gray">
+          <div className="flex items-center justify-between">
+            <p className="w-2/6">Profile picture</p>
+            <div className="bg-primary-200 w-[193px] h-[193px] rounded">
+
+              <input type="file" hidden/>
+            </div>
+            <p className="w-2/6 text-sm">Image must be below 1024x1024px. Use PNG or JPG format.</p>
+          </div>
+        </div>
 
         <div className="bg-gray-300 mt-6 rounded py-[46px] px-5">
+
+        </div>
+
+
+        <div className="md:flex md:justify-end">
+          <button className="w-full md:w-[91px] bg-button-base rounded py-[11px] font-semibold text-white mt-10">Save</button>
         </div>
       </div>
     </main>

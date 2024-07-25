@@ -22,43 +22,41 @@ export default function Home() {
         <Mockup />
       </div>
 
-      <div className="bg-white p-4 sm:p-10 col-span-3 rounded-md max-h-screen overflow-hidden relative">
-        <div className="overflow-y-auto pr-4 max-h-[calc(100vh-8rem)]"> {/* Adjust max-height and padding for scroll area */}
-          <div>
-            <h1 className="font-bold text-2xl text-gray leading-9">Customize your links</h1>
-            <p className="text-gray-100 font-normal text-base">Add/edit/remove links below and then share all your profiles with the world!</p>
-          </div>
+      <div className="bg-white p-4 sm:p-10 col-span-3 rounded-md">
+        <div>
+          <h1 className="font-bold text-2xl text-gray leading-9">Customize your links</h1>
+          <p className="text-gray-100 font-normal text-base">Add/edit/remove links below and then share all your profiles with the world!</p>
+        </div>
 
-          <button
-            onClick={addCard}
-            className="w-full border border-primary rounded py-[11px] font-semibold text-primary mt-10 hover:bg-primary-200 hover:border-primary-200 duration-200"
-          >
-            + Add new link
-          </button>
+        <button
+          onClick={addCard}
+          className="w-full border border-primary rounded py-[11px] font-semibold text-primary mt-10 hover:bg-primary-200 hover:border-primary-200 duration-200"
+        >
+          + Add new link
+        </button>
 
-          <div className="">
-            {cards.length > 0 ? (
-              <div className="">
-                {cards.map((id, index) => (
-                  <LinkCard
-                    key={id}
-                    id={id}
-                    position={index + 1} // Pass position starting from 1
-                    onRemove={removeCard}
-                  />
-                ))}
+        <div className="">
+          {cards.length > 0 ? (
+            <div className="">
+              {cards.map((id, index) => (
+                <LinkCard
+                  key={id}
+                  id={id}
+                  position={index + 1} // Pass position starting from 1
+                  onRemove={removeCard}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="bg-gray-300 mt-6 rounded sm:py-[46px] px-5 mx-auto">
+              <div>
+                <Image src={heroImage} width={240} height={160} alt="hero image" className="mx-auto" />
               </div>
-            ) : (
-              <div className="bg-gray-300 mt-6 rounded sm:py-[46px] px-5 mx-auto">
-                <div>
-                  <Image src={heroImage} width={240} height={160} alt="hero image" className="mx-auto" />
-                </div>
 
-                <h1 className="text-gray font-bold text-2xl md:text-3xl my-6 text-center">Let’s get you started</h1>
-                <p className="text-gray-100 text-center sm:max-w-[488px] mx-auto">Use the “Add new link” button to get started. Once you have more than one link, you can reorder and edit them. We’re here to help you share your profiles with everyone!</p>
-              </div>
-            )}
-          </div>
+              <h1 className="text-gray font-bold text-2xl md:text-3xl my-6 text-center">Let’s get you started</h1>
+              <p className="text-gray-100 text-center sm:max-w-[488px] mx-auto">Use the “Add new link” button to get started. Once you have more than one link, you can reorder and edit them. We’re here to help you share your profiles with everyone!</p>
+            </div>
+          )}
         </div>
 
         <div className="md:flex md:justify-end">
