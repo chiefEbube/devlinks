@@ -1,12 +1,7 @@
 "use client"
-import Image from "next/image";
-
-import heroImage from '../../../public/assets/images/hero-image.svg'
-import { useState } from "react";
 import Mockup from "../../components/Mockup";
 
 export default function Home() {
-  const [isLinkAdded, setIsLinkAdded] = useState(false)
   return (
     <main className="m-2 min-h-screen p-6 md:grid md:grid-cols-5 gap-5">
       <div className="hidden md:flex bg-white items-center justify-center col-span-2 p-10 rounded-md">
