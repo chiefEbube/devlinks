@@ -145,7 +145,7 @@ const LinkCard: FC<LinkCardProps> = ({ id, position, onRemove }) => {
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute z-10 mt-2 w-full p-6 bg-white border border-gray-300 rounded-md shadow-lg">
+          <div className="absolute z-10 mt-2 w-full max-h-80 overflow-y-auto p-2 bg-white border border-gray-300 rounded-md shadow-lg">
             {socialMediaOptions.map((option) => (
               <button
                 key={option}
