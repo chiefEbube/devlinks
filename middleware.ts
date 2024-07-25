@@ -1,12 +1,16 @@
-// import { NextResponse } from 'next/server'
-// import type { NextRequest } from 'next/server'
- 
-// export function middleware(request: NextRequest) {
-//   if (request.nextUrl.pathname.startsWith('/profile')) {
-//     return NextResponse.rewrite(new URL('/login', request.url))
-//   }
- 
-//   if (request.nextUrl.pathname.startsWith('/preview')) {
-//     return NextResponse.rewrite(new URL('/login', request.url))
-//   }
-// }
+import { NextRequest, NextResponse } from "next/server";
+
+const protectedRoutes = ["/", "/profile", "/preview"];
+export default function middleware(req: NextRequest) {
+
+    const isUserAuthenticated = false;
+
+  if (
+    !isUserAuthenticated &&
+    protectedRoutes.includes(req?.nextUrl?.pathname)
+  ) {
+    const absoluteUrl = new URL("/login", req.nextUrl.origin);
+    return NextResponse.redirect(absoluteUrl.toString());
+  }
+  return NextResponse.next();
+}
