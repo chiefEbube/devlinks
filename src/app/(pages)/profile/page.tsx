@@ -1,5 +1,8 @@
 "use client"
+import Image from "next/image";
 import Mockup from "../../components/Mockup";
+
+import File from "../../../../public/assets/icon/file.svg"
 
 export default function Home() {
   return (
@@ -14,14 +17,15 @@ export default function Home() {
           <p className="text-gray-100 font-normal text-base">Add your details to create a personal touch to your profile.</p>
         </div>
 
-        <div className="bg-gray-300 mt-6 rounded py-[46px] px-5 text-gray">
+        <div className="bg-gray-300 mt-6 rounded py-[46px] px-5 text-gray-100">
           <div className="flex items-center justify-between">
             <p className="w-2/6">Profile picture</p>
-            <div className="bg-primary-200 w-[193px] h-[193px] rounded">
-
+            <div className="bg-primary-200 w-[193px] h-[193px] rounded-md mr-10 grid place-content-center">
+                <Image src={File} width={32} height={27} alt="file icon" className="mx-auto"/>
+                <p className="mx-auto font-semibold text-primary">+ Uploade Image</p>
               <input type="file" hidden/>
             </div>
-            <p className="w-2/6 text-sm">Image must be below 1024x1024px. Use PNG or JPG format.</p>
+            <p className="w-2/6 text-xs">Image must be below 1024x1024px. Use PNG or JPG format.</p>
           </div>
         </div>
 
